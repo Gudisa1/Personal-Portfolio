@@ -1,0 +1,132 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+/* Width and color of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track (the area on the sides of the thumb) */
+::-webkit-scrollbar-track {
+  background: #f0f5f9; /* Light blue background */
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #0c0c1d; /* Blue thumb color */
+  border-radius: 3px; /* Rounded corners for the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0c0c1d; /* Darker blue on hover */
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  //   overflow: hidden;
+}
+.section1 {
+  height: 200vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile-xs {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (max-width: 676px) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+@mixin mobile-ms {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin mobile-lm {
+  @media (max-width: 968px) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile-xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tablet-xs {
+  @media (max-width: 1250px) {
+    @content;
+  }
+}
+
+@mixin tablet-s {
+  @media (max-width: 1320px) {
+    @content;
+  }
+}
+
+.box-container {
+  padding-bottom: 20rem;
+  padding-top: 1rem;
+}
+
+.box {
+  width: 20rem;
+  height: 20rem;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
